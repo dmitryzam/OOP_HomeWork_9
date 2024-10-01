@@ -20,6 +20,7 @@ public:
 	}			
 	Hospital(const std::initializer_list<std::string>& list) : Hospital(list.size()) {
 		//capacity = 100;	// можно по умолчанию, вместо инициализации capacity от list.size()
+		patients.reserve(list.size());
 		for (auto& el : list) {
 			patients.push_back(el);
 		}
